@@ -343,6 +343,10 @@ color: rgba(71, 71, 71, 0.843)
              animation: none;
 
   }
+  .laptop-image, .laptop-image img {
+    visibility: hidden !important;
+display: none !important;
+  }
  html, body {
  background: radial-gradient(circle, #000000, #101010, #101010, #0b0b0b, #141314, #000000, #150c19) !important;
 
