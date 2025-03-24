@@ -585,7 +585,6 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: none;
   background: none;
@@ -594,15 +593,14 @@ footer p {
 #contactForm input,
 #contactForm textarea {
   width: 32vw;
-  height: 16vh;
+  height: 12vh;
   margin: 0.7rem 0;
  background: none;
-  padding: 1rem;
   border: none;
   outline: none;
   border-radius: 10px;
   transition: transform 0.8s ease;
-  font-size: 28px;
+  font-size: 6vh;
   color: rgb(255, 237, 224);
 
 }
@@ -636,13 +634,12 @@ color: rgba(71, 71, 71, 0.843)
 #contactForm button {
   color: rgb(102, 92, 103);
  background: none;
-  font-size: 32px;
+  font-size: 12vh;
   font-weight: bold;
   cursor: pointer;
   
   transition: background 0.5s ease;
   border: 3px solid black;  
-  padding: 21px;
   width: 28vw;
   height: 10vh;
   margin-bottom: 90px !important;
@@ -723,17 +720,16 @@ html, body {
       font-size: 36px; }
 #contactForm input,
 #contactForm textarea {
-  width: 300px;
-  height: 82px !important;
+  width: 69vw;
+  height: 10vh !important;
   margin: 0.7rem 0;
   background: none;
-  padding: 1rem;
   border: none;
   outline: none;
   border-radius: 10px;
   font-weight: lighter;
   transition: transform 0.8s ease;
-  font-size: 16px;
+  font-size: 6vh;
   color: rgb(255, 237, 224);
 
   
@@ -744,12 +740,11 @@ html, body {
 
 color: rgb(102, 92, 103);
 background: none;
-font-size: 32px;
-width: 120px;
-height: 60px;
+font-size: 10vh;
+width: 24vw;
+height: 16vh;
 font-weight: bold;
 cursor: pointer;
-padding: 8px;
 margin-bottom: 90px ;
 border-radius: 31px;
 transition: background 0.5s ease;
@@ -800,8 +795,8 @@ header {
 
 #contactForm input,
 #contactForm textarea {
-  width: 300px;
-  height: 80px !important;
+  width: 69vw;
+  height: 9vh !important;
   margin: 0.7rem 0;
   background: none;
   padding: 1rem;
@@ -810,7 +805,7 @@ header {
   border-radius: 10px;
   font-weight: lighter;
   transition: transform 0.8s ease;
-  font-size: 16px;
+  font-size: 6vh;
   color: rgb(255, 237, 224);
 
   
@@ -819,12 +814,11 @@ header {
 #contactForm button {
   color: rgb(102, 92, 103);
  background: none;
-  font-size: 32px;
-width: 120px;
-height: 60px;
+  font-size: 12vh;
+width: 24vw;
+height: 12vh;
   font-weight: bold;
   cursor: pointer;
-  padding: 8px;
   margin-bottom: 90px ;
   border-radius: 31px;
   transition: background 0.5s ease;
@@ -921,7 +915,7 @@ input:focus, textarea:focus {
   left: 0;
   width: 100vw; 
   height: 100vh; 
-background: rgba(0, 0, 0, 0.4);    
+background: rgba(0, 0, 0, 0.82);    
     justify-content: center;
   align-items: center;
   z-index: 9999;
