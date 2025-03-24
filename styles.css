@@ -331,10 +331,24 @@ display: none !important;
 ::-webkit-scrollbar {
   display: none;
 }
-@media (min-width: 984px) and (max-width: 4940px) {
+@media (min-width: 980px) and (max-width: 4940px) {
   #about-me h2, #about-me li, #projects h2, #projects strong, #projects a, #projects p, #contact h2, #contact p, #kops a, #pops a, #contact, #saps, #naps a{
       text-align: center;
   }
+  
+  .kuva-otto, .kuva-otto img {
+    position: absolute !important; 
+    top: 6vh !important; 
+    right: -8vw !important;
+    transform: translateX(-50%) !important;
+    width: 20vw !important; 
+    height: auto !important; 
+    animation: fadeIn 1.9s ease-in-out;
+    border-radius: 50% !important;
+    opacity: 0.87;
+  
+    z-index: 1000 !important; 
+  } 
   }
 
 #skills strong {
