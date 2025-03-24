@@ -269,21 +269,6 @@ footer p {
   background: none;
 }
 
-#contactForm input,
-#contactForm textarea {
-  width: 69vw;
-  height: 12vh;
-  margin: 0.7rem 0;
- background: none;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  transition: transform 0.8s ease;
-  font-size: 28px;
-  color: rgb(255, 237, 224);
-
-}
-
 #contactForm input::placeholder,
 #contactForm textarea::placeholder {
 color: rgba(71, 71, 71, 0.843)
@@ -308,23 +293,6 @@ color: rgba(71, 71, 71, 0.843)
   background-clip: text !important;
   color: transparent !important;
   animation: gradient-animation 6s ease infinite, glowing-text 2s ease-in-out infinite alternate !important;
-}
-
-#contactForm button {
-  color: rgb(102, 92, 103);
- background: none;
-  font-size: 10vh;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 16vh;
-  transition: background 0.5s ease !important;
-  border: 3px solid black;  
-  padding: 21px;
-  width: 69vw;
-  height: 10vh;
-  margin-bottom: 90px !important;
-  
-
 }
 
 
@@ -376,17 +344,6 @@ display: none !important;
   #about-me h2, #about-me li, #projects h2, #projects strong, #projects a, #projects p, #contact h2, #contact p, #kops a, #pops a, #contact, #saps, #naps a{
       text-align: center;
   }
-  #nimi, #sähöposti {
-  height: 7vh !important;
-  width: 69vw !important;
-    font-size: 6vh !important;
-}
-#viestisi {
-  height: 28vh !important;
-  width: 69vw !important;
-    font-size: 6vh !important;
-
-}
   }
 
 #skills strong {
@@ -590,21 +547,6 @@ footer p {
   background: none;
 }
 
-#contactForm input,
-#contactForm textarea {
-  width: 32vw;
-  height: 12vh;
-  margin: 0.7rem 0;
- background: none;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  transition: transform 0.8s ease;
-  font-size: 6vh;
-  color: rgb(255, 237, 224);
-
-}
-
 #contactForm input::placeholder,
 #contactForm textarea::placeholder {
 color: rgba(71, 71, 71, 0.843)
@@ -631,22 +573,6 @@ color: rgba(71, 71, 71, 0.843)
   animation: gradient-animation 6s ease infinite, glowing-text 2s ease-in-out infinite alternate !important;
 }
 
-#contactForm button {
-  color: rgb(102, 92, 103);
- background: none;
-  font-size: 12vh;
-  font-weight: bold;
-  cursor: pointer;
-  
-  transition: background 0.5s ease;
-  border: 3px solid black;  
-  width: 28vw;
-  height: 10vh;
-  margin-bottom: 90px !important;
-  border-radius: 38px;
-
-  box-shadow: 0 0 8px rgba(97, 220, 239, 0.6); 
-}
 
 @keyframes gradient-animation {
   0% { background-position: 0% 50%; }
@@ -718,38 +644,6 @@ html, body {
   section h2 {
       margin-top: 0px !important;
       font-size: 36px; }
-#contactForm input,
-#contactForm textarea {
-  width: 69vw;
-  height: 10vh !important;
-  margin: 0.7rem 0;
-  background: none;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  font-weight: lighter;
-  transition: transform 0.8s ease;
-  font-size: 6vh;
-  color: rgb(255, 237, 224);
-
-  
-  
-  
-}
-#contactForm button {
-
-color: rgb(102, 92, 103);
-background: none;
-font-size: 10vh;
-width: 24vw;
-height: 16vh;
-font-weight: bold;
-cursor: pointer;
-margin-bottom: 90px ;
-border-radius: 31px;
-transition: background 0.5s ease;
-border: 3px solid black;  
-}
               body { padding: 0 10px;
                        scroll-behavior: smooth;
 
@@ -793,38 +687,6 @@ header {
   
     }
 
-#contactForm input,
-#contactForm textarea {
-  width: 69vw;
-  height: 9vh !important;
-  margin: 0.7rem 0;
-  background: none;
-  padding: 1rem;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  font-weight: lighter;
-  transition: transform 0.8s ease;
-  font-size: 6vh;
-  color: rgb(255, 237, 224);
-
-  
-}
-
-#contactForm button {
-  color: rgb(102, 92, 103);
- background: none;
-  font-size: 12vh;
-width: 24vw;
-height: 12vh;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 90px ;
-  border-radius: 31px;
-  transition: background 0.5s ease;
-  border: 3px solid black;  
-
-}
   
 .kuva-otto img {
   position: absolute !important; 
@@ -953,4 +815,90 @@ background: rgba(0, 0, 0, 0.82);
   .popup-content {
       animation: fadeIn 3.4s ease-in-out;
       }
-          
+
+
+
+
+
+
+
+@media screen and (max-width: 789px) {
+
+
+#contactForm button {
+
+color: rgb(102, 92, 103);
+background: none;
+font-size: 3.6vh;
+width: 24vw;
+height: 8vh;
+font-weight: bold;
+border: none;
+cursor: pointer;
+margin-bottom: 90px ;
+border-radius: 31px;
+transition: background 0.5s ease;
+box-shadow: none;
+}
+
+
+#contactForm input,
+#contactForm textarea {
+  width: 82vw;
+  height: 10vh !important;
+  margin: 0.7rem 0;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-weight: lighter;
+  transition: transform 0.8s ease;
+  font-size: 1.88vh;
+  color: rgb(255, 237, 224);
+  margin-bottom: 2vh;
+
+  
+  
+  
+}
+
+}
+
+
+
+@media screen and (min-width: 790px) {
+
+
+
+#contactForm input,
+#contactForm textarea {
+  width: 38vw !important;
+  height: 12vh;
+  margin-bottom: 4vh !important;
+  margin: 0.7rem 0;
+ background: none;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  transition: transform 0.8s ease;
+  font-size: 26px !important;
+  color: rgb(255, 237, 224);
+
+}
+
+
+#contactForm button {
+  color: rgb(102, 92, 103);
+ background: none;
+  font-size: 38px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: none !important;
+  transition: background 0.5s ease !important;
+  border: none !important;  
+  width: 16vw;
+  height: 10vh;
+  margin-bottom: 90px !important;
+
+}
+}
