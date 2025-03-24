@@ -264,7 +264,6 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: none;
   background: none;
@@ -276,7 +275,6 @@ footer p {
   height: 12vh;
   margin: 0.7rem 0;
  background: none;
-  padding: 1rem;
   border: none;
   outline: none;
   border-radius: 10px;
@@ -315,19 +313,18 @@ color: rgba(71, 71, 71, 0.843)
 #contactForm button {
   color: rgb(102, 92, 103);
  background: none;
-  font-size: 32px;
+  font-size: 10vh;
   font-weight: bold;
   cursor: pointer;
-  
+  margin-top: 16vh;
   transition: background 0.5s ease !important;
   border: 3px solid black;  
   padding: 21px;
   width: 69vw;
   height: 10vh;
   margin-bottom: 90px !important;
-  border-radius: 38px;
+  
 
-  box-shadow: 0 0 8px rgba(97, 220, 239, 0.6); 
 }
 
 
