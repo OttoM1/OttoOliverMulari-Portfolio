@@ -39,16 +39,7 @@
 header {
   font-size: 9vh;
 }
-
-#nimi, #sähöposti {
-  height: 12vh !important;
-  width: 88vw !important;
-}
-#viestisi {
-  height: 28vh !important;
-  width: 88vw !important;
-
-}
+  
 @keyframes gradient-animation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
