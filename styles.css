@@ -346,7 +346,8 @@ display: none !important;
     animation: fadeIn 1.9s ease-in-out;
     border-radius: 50% !important;
     opacity: 0.87;
-  
+  visibility: visible !important;
+    display: block !important;
     z-index: 1000 !important; 
   } 
   }
