@@ -367,7 +367,7 @@ display: none !important;
 ::-webkit-scrollbar {
   display: none;
 }
-@media (min-width: 984px) and (max-width: 1940px) {
+@media (min-width: 984px) and (max-width: 4940px) {
   #about-me h2, #about-me li, #projects h2, #projects strong, #projects a, #projects p, #contact h2, #contact p, #kops a, #pops a, #contact, #saps, #naps a{
       text-align: center;
   }
@@ -577,8 +577,8 @@ footer p {
 
 #contactForm input,
 #contactForm textarea {
-  width: 600px;
-  height: 78px;
+  width: 32vw;
+  height: 16vh;
   margin: 0.7rem 0;
  background: none;
   padding: 1rem;
@@ -627,8 +627,8 @@ color: rgba(71, 71, 71, 0.843)
   transition: background 0.5s ease;
   border: 3px solid black;  
   padding: 21px;
-  width: 240px;
-  height: 94px;
+  width: 28vw;
+  height: 10vh;
   margin-bottom: 90px !important;
   border-radius: 38px;
 
