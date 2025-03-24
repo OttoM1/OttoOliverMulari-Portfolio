@@ -40,7 +40,15 @@ header {
   font-size: 9vh;
 }
 
+#nimi, #sähöposti {
+  height: 12vh !important;
+  width: 88vw !important;
+}
+#viestisi {
+  height: 28vh !important;
+  width: 88vw !important;
 
+}
 @keyframes gradient-animation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -371,6 +379,15 @@ display: none !important;
   #about-me h2, #about-me li, #projects h2, #projects strong, #projects a, #projects p, #contact h2, #contact p, #kops a, #pops a, #contact, #saps, #naps a{
       text-align: center;
   }
+  #nimi, #sähöposti {
+  height: 16vh !important;
+  width: 38vw !important;
+}
+#viestisi {
+  height: 28vh !important;
+  width: 38vw !important;
+
+}
   }
 
 #skills strong {
