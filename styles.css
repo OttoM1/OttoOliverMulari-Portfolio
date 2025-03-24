@@ -380,12 +380,14 @@ display: none !important;
       text-align: center;
   }
   #nimi, #sähöposti {
-  height: 16vh !important;
-  width: 38vw !important;
+  height: 10vh !important;
+  width: 63vw !important;
+    font-size: 6.9vh !important;
 }
 #viestisi {
   height: 28vh !important;
-  width: 38vw !important;
+  width: 63vw !important;
+    font-size: 6.9vh !important;
 
 }
   }
