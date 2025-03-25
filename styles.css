@@ -27,8 +27,6 @@
 
 
 #matrixCanvas {
-  margin: 0;
-  padding: 0;
   top: 0;
   left: 0;
   z-index: 0;
@@ -323,6 +321,9 @@ color: rgba(71, 71, 71, 0.843)
       transition: none;
              animation: none;
 
+  }
+  html, body {
+    background-color: black !important;
   }
   .laptop-image, .laptop-image img {
     visibility: hidden !important;
@@ -642,7 +643,7 @@ html, body {
       font-size: 20px; 
   
     }
-/*
+
 
 .kuva-otto img {
   position: absolute !important; 
@@ -658,24 +659,7 @@ html, body {
   z-index: 1000 !important; 
 } 
 
-  */
-
   
-
-.kuva-otto img {
-  position: absolute !important; 
-  top: 50px !important; 
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 100vw !important; 
-  height: 32vh !important; 
-  animation: fadeIn 1.9s ease-in-out;
-  border-radius: 0 !important;
-  opacity: 0.87;
-
-  z-index: 1000 !important; 
-  margin-bottom: 8vh !important;
-} 
   
   header {
       margin-top: 340px !important; 
