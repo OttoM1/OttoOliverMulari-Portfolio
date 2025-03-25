@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
 </head>
 <body>
   
-    <canvas id="matrixCanvas"></canvas>
 
     
     <header>
@@ -84,6 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     <main class="container">
+                        <canvas id="matrixCanvas"></canvas>
+
 
  <section id="skills" class="fade-in-up visible fade-in">
             <h2>What I bring to the table?</h2>
@@ -277,7 +278,65 @@ Latest website for a customer
         window.location.href = "index2.html";  
     });
 </script>
-    <!-- JS faili lopus muista -->
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const canvas = document.getElementById("matrixCanvas");
+        const ctx = canvas.getContext("2d");
+    
+        const letters = "アァイィウエオカキクケコサシスセソ01";
+        const fontSize = 21;
+        const numRaindrops = 100;
+        let raindrops = [];
+    
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+    
+        function setupMatrix() {
+            raindrops = [];
+            for (let i = 0; i < numRaindrops; i++) {
+                raindrops.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    speed: 0.006 + Math.random() * 0.02,
+                    char: letters.charAt(Math.floor(Math.random() * letters.length))
+                });
+            }
+        }
+    
+        function drawMatrix() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "rgba(30, 30, 30, 0.48)";
+            ctx.font = `${fontSize}px monospace`;
+    
+            for (let drop of raindrops) {
+                ctx.fillText(drop.char, drop.x, drop.y);
+    
+                drop.y += drop.speed * fontSize;
+    
+                if (drop.y > canvas.height) {
+                    drop.y = -fontSize;
+                    drop.x = Math.random() * canvas.width;
+                    drop.char = letters.charAt(Math.floor(Math.random() * letters.length));
+                }
+            }
+    
+            requestAnimationFrame(drawMatrix);
+        }
+    
+        resizeCanvas();     
+        setupMatrix();     
+        drawMatrix();       
+    
+        window.addEventListener("resize", () => {
+            resizeCanvas();
+        });
+    });
+    </script>
+    <!-- JS  lopus muista -->
     <script src="scripts.js"></script>
 </body>
 </html>
