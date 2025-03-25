@@ -55,15 +55,17 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 </head>
 <body>
+
+    <main class="container">
+        <canvas id="matrixCanvas"></canvas>
   
+        
 
     
     <header>
-        <div class="kuva-otto">
-            <!--<img src="ottop.jpg" alt="kuva-otto" class="laptop-image">-->
-                    <img src="ottop.jpg" loading="eager" alt="Background Image" alt="kuva-otto" class="laptop-image">
-</div>
+        
                     <h1>  Otto Oliver Mulari</h1>
+
         <p>Information Processing Science Student | University of Oulu </p>
         <nav>
             <ul>
@@ -73,17 +75,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 <li><a href="#contact" aria-label="Navigate to Contact">📞 Contact</a></li>
             </ul>
         </nav>
+       
     </header>
 
    
-    <section id="signature-section" style="text-align: center; margin-top: 50px;">
-       
+    <div class="kuva-otto">
+        <img src="ottop.jpg" loading="eager" alt="Background Image" alt="kuva-otto" class="laptop-image">
+</div>
           
     </section>
 
     
-    <main class="container">
-                        <canvas id="matrixCanvas"></canvas>
 
 
  <section id="skills" class="fade-in-up visible fade-in">
@@ -106,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-        
        
         <section id="about-me" class="fade-in-up fade-in">
     <h2>My Background</h2>
@@ -280,20 +281,20 @@ Latest website for a customer
 </script>
 
 
-    <script>
+<script>
     document.addEventListener("DOMContentLoaded", () => {
         const canvas = document.getElementById("matrixCanvas");
         const ctx = canvas.getContext("2d");
     
-        const letters = "アァイィウエオカキクケコサシスセソ01";
+        const letters = "アァイィウエオカキクケコサシスセソ";
         const fontSize = 21;
         const numRaindrops = 100;
         let raindrops = [];
     
         function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
     
         function setupMatrix() {
             raindrops = [];
@@ -338,5 +339,7 @@ Latest website for a customer
     </script>
     <!-- JS  lopus muista -->
     <script src="scripts.js"></script>
+</canvas>
 </body>
+
 </html>
