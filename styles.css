@@ -25,6 +25,9 @@
 }
 
 
+html, body {
+  overflow-x: hidden;
+}
 
 #matrixCanvas {
   top: 0;
@@ -650,12 +653,16 @@ html, body {
 
 
 .kuva-otto img {
-  position: absolute !important; 
-  top: 0px !important; 
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 100vw !important; 
-  height: 46vh !important; 
+
+position: relative !important; 
+      top: 6px !important; 
+      left: 0% !important;
+      width: 80vw !important; 
+      height: 80vw !important; 
+      border-radius: 50%;
+
+
+  
   animation: fadeIn2 1.9s ease-in-out;
   opacity: 0.633;
   filter: brightness(1.1);
