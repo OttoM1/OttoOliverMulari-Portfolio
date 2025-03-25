@@ -690,7 +690,7 @@ box-shadow: 0 3px 8px #000000;
 
 
 
-@media (max-width: 414px) {
+@media (max-width: 490px) {
   section h2 {
       margin-top: 0px !important;
       font-size: 4.85vh; }
