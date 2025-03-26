@@ -310,17 +310,23 @@ Latest website for a customer
         });
       }
     }
-         function drawGradientBackground() {
-    let gradient = ctx.createRadialGradient(
-      canvas.width / 2, canvas.height / 2, canvas.height * 0.1,
-      canvas.width / 2, canvas.height / 2, canvas.height
-    );
-    gradient.addColorStop(0, "#141414");
-    gradient.addColorStop(1, "#000000");
-    
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-  }
+        function drawGradientBackground() {
+  let gradient = ctx.createRadialGradient(
+    canvas.width / 2, canvas.height / 2, 0,
+    canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 1.2
+  );
+
+  gradient.addColorStop(0.0, "#000000");
+  gradient.addColorStop(0.2, "#101010");
+  gradient.addColorStop(0.4, "#101010");
+  gradient.addColorStop(0.6, "#0b0b0b");
+  gradient.addColorStop(0.8, "#141314");
+  gradient.addColorStop(0.9, "#000000");
+  gradient.addColorStop(1.0, "#150c19");
+
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
 
     function drawMatrix() {
          drawGradientBackground();
