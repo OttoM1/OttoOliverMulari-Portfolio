@@ -28,7 +28,6 @@
 #matrixCanvas {
   top: 0;
   left: 0;
-  z-index: -1;
   pointer-events: none;
   position: fixed;
  
@@ -48,6 +47,7 @@
       transition: unset !important;
   }
 header {
+  z-index: 1000;
   font-size: 9vh;
 }
   
