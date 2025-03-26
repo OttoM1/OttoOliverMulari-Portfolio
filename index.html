@@ -282,23 +282,20 @@ Latest website for a customer
 
 
 <script>
-   document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("matrixCanvas");
     const ctx = canvas.getContext("2d");
 
     const letters = "アァイィウエオカキクケコサシスセソ";
-    const fontSizes = [10, 24]; 
-const numRaindrops = 40;
-       let raindrops = [];
+    const fontSizes = [8, 24];
+    const numRaindrops = 40;
+    let raindrops = [];
 
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-
-        const raindropDensity = 0.05; 
-    numRaindrops = Math.floor(canvas.width * raindropDensity);
-
     }
+
     function setupMatrix() {
         raindrops = [];
         for (let i = 0; i < numRaindrops; i++) {
@@ -313,27 +310,26 @@ const numRaindrops = 40;
         }
     }
 
-   function drawMatrix() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "rgba(38, 38, 40, 0.9)";
+    function drawMatrix() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "rgba(38, 38, 40, 0.83)";
 
-    for (let drop of raindrops) {
-        ctx.font = ${drop.fontSize}px monospace;
-        ctx.fillText(drop.char, Math.round(drop.x), Math.round(drop.y));
+        for (let drop of raindrops) {
+            ctx.font = `${drop.fontSize}px monospace`; 
+            ctx.fillText(drop.char, drop.x, drop.y);
 
-        drop.y += drop.speed * drop.fontSize;
+            drop.y += drop.speed * drop.fontSize;
 
-        if (drop.y > canvas.height) {
-            drop.y = -drop.fontSize;
-            drop.x = Math.random() * canvas.width;
-            drop.char = letters.charAt(Math.floor(Math.random() * letters.length));
-            drop.fontSize = fontSizes[Math.floor(Math.random() * fontSizes.length)];
+            if (drop.y > canvas.height) {
+                drop.y = -drop.fontSize;
+                drop.x = Math.random() * canvas.width;
+                drop.char = letters.charAt(Math.floor(Math.random() * letters.length));
+                drop.fontSize = fontSizes[Math.floor(Math.random() * fontSizes.length)];
+            }
         }
-    }
 
-    requestAnimationFrame(drawMatrix);
-}
+        requestAnimationFrame(drawMatrix);
+    }
 
     resizeCanvas();
     setupMatrix();
