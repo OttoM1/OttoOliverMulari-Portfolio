@@ -310,8 +310,20 @@ Latest website for a customer
         });
       }
     }
+         function drawGradientBackground() {
+    let gradient = ctx.createRadialGradient(
+      canvas.width / 2, canvas.height / 2, canvas.height * 0.1,
+      canvas.width / 2, canvas.height / 2, canvas.height
+    );
+    gradient.addColorStop(0, "#141414");
+    gradient.addColorStop(1, "#000000");
+    
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
 
     function drawMatrix() {
+         drawGradientBackground();
       ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
