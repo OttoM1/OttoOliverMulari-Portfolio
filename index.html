@@ -302,7 +302,7 @@ Latest website for a customer
                 raindrops.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    speed: 0.006 + Math.random() * 0.02,
+                    speed: 0.008 + Math.random() * 0.04,
                     char: letters.charAt(Math.floor(Math.random() * letters.length))
                 });
             }
@@ -322,8 +322,7 @@ Latest website for a customer
                     drop.y = -fontSize;
                     drop.x = Math.random() * canvas.width;
                     drop.char = letters.charAt(Math.floor(Math.random() * letters.length));
-                }
-            }
+                }}
     
             requestAnimationFrame(drawMatrix);
         }
