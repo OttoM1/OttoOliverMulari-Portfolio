@@ -28,9 +28,8 @@
 #matrixCanvas {
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
-background-color: transparent;
   position: fixed;
  
   width: 100vw;
@@ -173,6 +172,7 @@ header p {
 }
 
 nav ul {
+  z-index: 1000;
   list-style: none;
   text-align: center;
   padding: 0;
@@ -182,6 +182,8 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-right: 15px;
+    z-index: 1000;
+
 }
 
 nav ul li a {
@@ -191,6 +193,8 @@ nav ul li a {
   background: linear-gradient(45deg, #2c2c2c, #3a3a3a, #ffffff, #5b5f66, #819cbf);
   background-size: 200% 200%;
   -webkit-background-clip: text;
+    z-index: 1000;
+
   background-clip: text;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.19), 
                -2px -2px 5px rgba(0, 0, 0, 0.19) !important;
@@ -355,6 +359,7 @@ display: none !important;
     animation: fadeIn 1.9s ease-in-out;
     border-radius: 50% !important;
     opacity: 0.87;
+
   visibility: visible !important;
     display: block !important;
     z-index: 1000 !important; 
@@ -444,6 +449,8 @@ header {
   transition: all 0.9s ease;
 }
 header h1 {
+    z-index: 1000;
+
   margin: 0 !important;
   padding-top: 8vh !important;
 }
@@ -471,11 +478,15 @@ nav ul {
   text-align: center;
   padding: 0;
   margin: 1rem 0;
+    z-index: 1000;
+
 }
 
 nav ul li {
   display: inline-block;
   margin-right: 15px;
+    z-index: 1000;
+
 }
 
 nav ul li a {
@@ -486,6 +497,8 @@ nav ul li a {
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
+    z-index: 1000;
+
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.19), 
                -2px -2px 5px rgba(0, 0, 0, 0.19) !important;
   color: transparent;
