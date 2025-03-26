@@ -187,7 +187,7 @@ nav ul li {
 nav ul li a {
   font-size: 2.34rem;
   transition: transform 1s ease, color 1s ease !important;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.92);
   background: linear-gradient(45deg, #2c2c2c, #3a3a3a, #ffffff, #5b5f66, #819cbf);
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -481,7 +481,7 @@ nav ul li {
 nav ul li a {
   font-size: 2.34rem;
   transition: transform 1.55s ease, color 1.55s ease;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.92);
   background: linear-gradient(45deg, #2c2c2c, #3a3a3a, #ffffff, #5b5f66, #819cbf);
   background-size: 200% 200%;
   -webkit-background-clip: text;
