@@ -30,7 +30,7 @@
   left: 0;
   pointer-events: none;
   position: fixed;
- 
+ z-index: -1;
   width: 100vw;
   height: 100vh;
 }
@@ -47,7 +47,6 @@
       transition: unset !important;
   }
 header {
-  z-index: 1000;
   font-size: 9vh;
 }
   
@@ -172,7 +171,6 @@ header p {
 }
 
 nav ul {
-  z-index: 1000;
   list-style: none;
   text-align: center;
   padding: 0;
@@ -182,7 +180,6 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-right: 15px;
-    z-index: 1000;
 
 }
 
