@@ -287,56 +287,63 @@ Latest website for a customer
     const ctx = canvas.getContext("2d");
 
     const letters = "アァイィウエオカキクケコサシスセソ";
-    const fontSizes = [8, 24];
-    const numRaindrops = 40;
+    const fontSizes = [8, 20, 28];
+    const numRaindrops = 69;
     let raindrops = [];
 
     function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     }
 
     function setupMatrix() {
-        raindrops = [];
-        for (let i = 0; i < numRaindrops; i++) {
-            const size = fontSizes[Math.floor(Math.random() * fontSizes.length)];
-            raindrops.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                speed: 0.016 + Math.random() * 0.04,
-                char: letters.charAt(Math.floor(Math.random() * letters.length)),
-                fontSize: size 
-            });
-        }
+      raindrops = [];
+      for (let i = 0; i < numRaindrops; i++) {
+        const size = fontSizes[Math.floor(Math.random() * fontSizes.length)];
+        raindrops.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          speed: 0.1 + Math.random() * 2,
+          char: letters.charAt(Math.floor(Math.random() * letters.length)),
+          fontSize: size,
+          opacity: Math.random() * 0.5 + 0.5
+        });
+      }
     }
 
     function drawMatrix() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "rgba(38, 38, 40, 0.83)";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        for (let drop of raindrops) {
-            ctx.font = `${drop.fontSize}px monospace`; 
-            ctx.fillText(drop.char, drop.x, drop.y);
+      for (let drop of raindrops) {
+        ctx.fillStyle = `rgba(40, 40, 45, ${drop.opacity})`;
+        ctx.font = `${drop.fontSize}px monospace`;
+        ctx.fillText(drop.char, drop.x, drop.y);
 
-            drop.y += drop.speed * drop.fontSize;
+        drop.y += drop.speed;
 
-            if (drop.y > canvas.height) {
-                drop.y = -drop.fontSize;
-                drop.x = Math.random() * canvas.width;
-                drop.char = letters.charAt(Math.floor(Math.random() * letters.length));
-                drop.fontSize = fontSizes[Math.floor(Math.random() * fontSizes.length)];
-            }
+        if (drop.y > canvas.height) {
+          drop.y = -drop.fontSize;
+          drop.x = Math.random() * canvas.width;
+          drop.char = letters.charAt(Math.floor(Math.random() * letters.length));
+          drop.fontSize = fontSizes[Math.floor(Math.random() * fontSizes.length)];
+          drop.speed = 0.5 + Math.random() * 2;
+          drop.opacity = Math.random() * 0.4 + 0.5;
         }
+      }
 
-        requestAnimationFrame(drawMatrix);
+      requestAnimationFrame(drawMatrix);
     }
+
+    window.addEventListener("resize", () => {
+      resizeCanvas();
+      setupMatrix();
+    });
 
     resizeCanvas();
     setupMatrix();
     drawMatrix();
-
-    window.addEventListener("resize", resizeCanvas);
-});
+  });
     </script>
     <!-- JS  lopus muista -->
     <script src="scripts.js"></script>
