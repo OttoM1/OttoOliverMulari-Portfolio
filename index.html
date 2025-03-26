@@ -283,19 +283,20 @@ Latest website for a customer
 
 
         <script>
+            
     document.addEventListener("DOMContentLoaded", () => {
         const canvas = document.getElementById("matrixCanvas");
         const ctx = canvas.getContext("2d");
     
-        const letters = "アァイィウエオカキクケコサシスセソ";
-        const fontSize = 21;
-        const numRaindrops = 42;
+        const letters = "アァイィウエオカキクケコサシスセソ01";
+        const fontSize = 24;
+        const numRaindrops = 16;
         let raindrops = [];
     
         function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
     
         function setupMatrix() {
             raindrops = [];
@@ -303,7 +304,7 @@ Latest website for a customer
                 raindrops.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    speed: 0.016 + Math.random() * 0.036,
+                    speed: 0.038 + Math.random() * 0.046,
                     char: letters.charAt(Math.floor(Math.random() * letters.length))
                 });
             }
@@ -311,8 +312,8 @@ Latest website for a customer
     
         function drawMatrix() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "rgba(38, 38, 40, 0.9)";
-            ctx.font = ${fontSize}px monospace;
+            ctx.fillStyle = "rgba(30, 32, 32, 0.88)";
+            ctx.font = `${fontSize}px monospace`;
     
             for (let drop of raindrops) {
                 ctx.fillText(drop.char, drop.x, drop.y);
@@ -323,20 +324,19 @@ Latest website for a customer
                     drop.y = -fontSize;
                     drop.x = Math.random() * canvas.width;
                     drop.char = letters.charAt(Math.floor(Math.random() * letters.length));
-                }}
+                }
+            }
     
             requestAnimationFrame(drawMatrix);
         }
     
         resizeCanvas();     
-        setupMatrix();     
+        setupMatrix();      
         drawMatrix();       
     
-        window.addEventListener("resize", () => {
-            resizeCanvas();
-        });
+       
     });
-    </script>
+        </script>
     <!-- JS  lopus muista -->
     <script src="scripts.js"></script>
 </canvas>
