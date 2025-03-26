@@ -282,61 +282,62 @@ Latest website for a customer
 
 
     <script>
+
+        <script>
     document.addEventListener("DOMContentLoaded", () => {
-    const canvas = document.getElementById("matrixCanvas");
-    const ctx = canvas.getContext("2d");
-
-    const letters = "アァイィウエオカキクケコサシスセソ";
-    const fontSizes = [8, 24];
-    const numRaindrops = 40;
-    let raindrops = [];
-
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-
-    function setupMatrix() {
-        raindrops = [];
-        for (let i = 0; i < numRaindrops; i++) {
-            const size = fontSizes[Math.floor(Math.random() * fontSizes.length)];
-            raindrops.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                speed: 0.016 + Math.random() * 0.04,
-                char: letters.charAt(Math.floor(Math.random() * letters.length)),
-                fontSize: size 
-            });
-        }
-    }
-
-    function drawMatrix() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "rgba(38, 38, 40, 0.83)";
-
-        for (let drop of raindrops) {
-            ctx.font = ${drop.fontSize}px monospace; 
-            ctx.fillText(drop.char, drop.x, drop.y);
-
-            drop.y += drop.speed * drop.fontSize;
-
-            if (drop.y > canvas.height) {
-                drop.y = -drop.fontSize;
-                drop.x = Math.random() * canvas.width;
-                drop.char = letters.charAt(Math.floor(Math.random() * letters.length));
-                drop.fontSize = fontSizes[Math.floor(Math.random() * fontSizes.length)];
+        const canvas = document.getElementById("matrixCanvas");
+        const ctx = canvas.getContext("2d");
+    
+        const letters = "アァイィウエオカキクケコサシスセソ";
+        const fontSize = 21;
+        const numRaindrops = 42;
+        let raindrops = [];
+    
+        function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+    
+        function setupMatrix() {
+            raindrops = [];
+            for (let i = 0; i < numRaindrops; i++) {
+                raindrops.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    speed: 0.016 + Math.random() * 0.036,
+                    char: letters.charAt(Math.floor(Math.random() * letters.length))
+                });
             }
         }
-
-        requestAnimationFrame(drawMatrix);
-    }
-
-    resizeCanvas();
-    setupMatrix();
-    drawMatrix();
-
-    window.addEventListener("resize", resizeCanvas);
-});
+    
+        function drawMatrix() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "rgba(38, 38, 40, 0.9)";
+            ctx.font = ${fontSize}px monospace;
+    
+            for (let drop of raindrops) {
+                ctx.fillText(drop.char, drop.x, drop.y);
+    
+                drop.y += drop.speed * fontSize;
+    
+                if (drop.y > canvas.height) {
+                    drop.y = -fontSize;
+                    drop.x = Math.random() * canvas.width;
+                    drop.char = letters.charAt(Math.floor(Math.random() * letters.length));
+                }}
+    
+            requestAnimationFrame(drawMatrix);
+        }
+    
+        resizeCanvas();     
+        setupMatrix();     
+        drawMatrix();       
+    
+        window.addEventListener("resize", () => {
+            resizeCanvas();
+        });
+    });
+    </script>
     </script>
     <!-- JS  lopus muista -->
     <script src="scripts.js"></script>
