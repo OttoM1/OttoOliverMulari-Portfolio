@@ -294,8 +294,11 @@ Latest website for a customer
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-    }
 
+        const raindropDensity = 0.05; 
+    numRaindrops = Math.floor(canvas.width * raindropDensity);
+
+    }
     function setupMatrix() {
         raindrops = [];
         for (let i = 0; i < numRaindrops; i++) {
